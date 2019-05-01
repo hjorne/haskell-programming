@@ -75,8 +75,15 @@ runCh15 = do
     quickCheck (semigroupAssoc :: BoolConjAssoc)
     quickCheck (semigroupAssoc :: BoolDisjAssoc)
     quickCheck (semigroupAssoc :: OrAssoc)
+    quickCheck (semigroupAssoc :: CombineAssoc)
 
 
-newtype Combine a b =
-    Combine { unCombine :: (a -> b) } 
+newtype Combine a b = Combine { unCombine :: (a -> b) } 
 
+instance (Semigroup a, Semigroup b) => Semigroup (Combine a b) where
+    f <> g = Combine h'
+        where f' = unCombine f
+              g' = unCombine g
+              h' x = f' x <> g' x
+
+type CombineAssoc = Combine String String -> Combine String String -> Combine String String -> Bool
