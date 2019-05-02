@@ -18,3 +18,7 @@ monoidLeftIdentity m = mempty <> m == m
 monoidRightIdentity :: (Eq m, Monoid m)
                     => m -> Bool
 monoidRightIdentity m = m <> mempty == m
+
+-- monoidLeftAndRightIdentities :: (Eq m, Monoid m)
+--                              => m -> Bool
+-- monoidLeftAndRightIdentities m = (m <> mempty == m) && (mempty <> m == m)

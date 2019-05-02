@@ -28,6 +28,7 @@ library:
   source-dirs: 
     - src
     - src/ch15
+    - src/ch16
 
 executables:
   haskell-learning-exe:
