@@ -1,0 +1,75 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e61bdd440f716d06d79975de9e5d5a539972c95be5b21f6096fb261ae10e6998
+
+name:           haskell-learning
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/hjorne/haskell-learning#readme>
+homepage:       https://github.com/hjorne/haskell-learning#readme
+bug-reports:    https://github.com/hjorne/haskell-learning/issues
+author:         Joe Horne
+maintainer:     joseph.e.horne@gmail.com
+copyright:      MIT License
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/hjorne/haskell-learning
+
+library
+  exposed-modules:
+      Applicative1
+      BadMonoid
+      IdentityApplicative
+      MaybeApplicative
+  other-modules:
+      Paths_haskell_learning
+  hs-source-dirs:
+      src
+      src/ch17
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , checkers
+    , hspec
+  default-language: Haskell2010
+
+executable haskell-learning-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_learning
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , checkers
+    , haskell-learning
+    , hspec
+  default-language: Haskell2010
+
+test-suite haskell-learning-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_learning
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , checkers
+    , haskell-learning
+    , hspec
+  default-language: Haskell2010
