@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e61bdd440f716d06d79975de9e5d5a539972c95be5b21f6096fb261ae10e6998
+-- hash: 60c873b3a5b73ee8fdcdd7c0055751ef7ece73b786903775198ebd12376e8f0a
 
 name:           haskell-learning
 version:        0.1.0.0
@@ -27,15 +27,12 @@ source-repository head
 
 library
   exposed-modules:
-      Applicative1
-      BadMonoid
-      IdentityApplicative
-      MaybeApplicative
+      Test
   other-modules:
       Paths_haskell_learning
   hs-source-dirs:
       src
-      src/ch17
+      src/ch18
   build-depends:
       QuickCheck
     , base >=4.7 && <5
