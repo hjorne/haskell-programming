@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 60c873b3a5b73ee8fdcdd7c0055751ef7ece73b786903775198ebd12376e8f0a
+-- hash: e96df14629b08683e7afdb63b7198fc58925f1fb9cee12319b21a77df032a31f
 
 name:           haskell-learning
 version:        0.1.0.0
@@ -27,6 +27,9 @@ source-repository head
 
 library
   exposed-modules:
+      Binding
+      Cows
+      ListMonad
       Test
   other-modules:
       Paths_haskell_learning

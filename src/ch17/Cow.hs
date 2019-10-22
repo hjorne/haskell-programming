@@ -35,6 +35,25 @@ cowBuilder2 name' age' weight' =
         <*> noNegative age' 
         <*> noNegative weight'
 
+weightCheck :: Cow -> Maybe Cow
+weightCheck c = 
+    let w = weight c
+        n = name c
+    in if n == "Bess" && w > 499
+       then Nothing
+       else Just c
+
+-- This is clearly terrible
+monadicCow :: String -> Int -> Int -> Maybe Cow
+monadicCow name' age' weight' = 
+    let c = Cow <$> noEmpty name' 
+                <*> noNegative age' 
+                <*> noNegative weight'
+    in case c of
+        Nothing -> Nothing
+        Just cow -> weightCheck cow
+
+
 cowBuilder3 :: String -> Int -> Int -> Maybe Cow
 cowBuilder3 name' age' weight' =
     liftA3 Cow (noEmpty name')
