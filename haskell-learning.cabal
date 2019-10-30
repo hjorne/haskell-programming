@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e96df14629b08683e7afdb63b7198fc58925f1fb9cee12319b21a77df032a31f
+-- hash: 2afd465c8774b11fc614b4ed02c2ffeabf950f99354fe49d2830660792decbfc
 
 name:           haskell-learning
 version:        0.1.0.0
@@ -27,20 +27,28 @@ source-repository head
 
 library
   exposed-modules:
-      Binding
-      Cows
-      ListMonad
-      Test
+      AltParsing
+      Data.Ini
+      FractionDecimal
+      LearnParsers
+      Text.Fractions
   other-modules:
       Paths_haskell_learning
   hs-source-dirs:
       src
-      src/ch18
+      src/ch24
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , bytestring
     , checkers
+    , containers
     , hspec
+    , parsers
+    , raw-strings-qq
+    , text
+    , transformers
+    , trifecta
   default-language: Haskell2010
 
 executable haskell-learning-exe
@@ -53,9 +61,16 @@ executable haskell-learning-exe
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , bytestring
     , checkers
+    , containers
     , haskell-learning
     , hspec
+    , parsers
+    , raw-strings-qq
+    , text
+    , transformers
+    , trifecta
   default-language: Haskell2010
 
 test-suite haskell-learning-test
@@ -69,7 +84,14 @@ test-suite haskell-learning-test
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , bytestring
     , checkers
+    , containers
     , haskell-learning
     , hspec
+    , parsers
+    , raw-strings-qq
+    , text
+    , transformers
+    , trifecta
   default-language: Haskell2010

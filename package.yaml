@@ -24,12 +24,19 @@ dependencies:
 - QuickCheck
 - hspec
 - checkers
+- trifecta
+- transformers
+- parsers
+- raw-strings-qq
+- bytestring
+- containers
+- text
 
 library:
   source-dirs: 
     - src
-    # - src/ch17
-    - src/ch18
+    # - src/ch18
+    - src/ch24
 
 executables:
   haskell-learning-exe:
