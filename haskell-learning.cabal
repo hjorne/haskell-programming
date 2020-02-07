@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2afd465c8774b11fc614b4ed02c2ffeabf950f99354fe49d2830660792decbfc
+-- hash: 237fa63628a597d4a06fe8eb3eecd7e126212c7d1fda49fd98942a6bf9a63f28
 
 name:           haskell-learning
 version:        0.1.0.0
@@ -27,16 +27,12 @@ source-repository head
 
 library
   exposed-modules:
-      AltParsing
-      Data.Ini
-      FractionDecimal
-      LearnParsers
-      Text.Fractions
+      Bind
   other-modules:
       Paths_haskell_learning
   hs-source-dirs:
       src
-      src/ch24
+      src/ch18
   build-depends:
       QuickCheck
     , base >=4.7 && <5

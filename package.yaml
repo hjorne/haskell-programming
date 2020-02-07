@@ -35,8 +35,7 @@ dependencies:
 library:
   source-dirs: 
     - src
-    # - src/ch18
-    - src/ch24
+    - src/ch18
 
 executables:
   haskell-learning-exe:
